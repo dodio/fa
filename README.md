@@ -1,2 +1,2 @@
 # fa
-node web
+node web 脚手架
