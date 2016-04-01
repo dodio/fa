@@ -1,11 +1,4 @@
-var express = require("express");
-
-function Fa(conf){
-  var app = this.app = express(),
-      swig = require("./lib/fa-swig")();
-
-  app.engine("tpl", swig.renderFile );
-  app.set("view engine", "tpl");
-  
+var Fa = require("./lib/fa");
+module.exports = function createFa(options) {
+    return new Fa(options);
 }
-module.exports = new Fa();
