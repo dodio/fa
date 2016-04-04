@@ -1,9 +1,18 @@
-{
-    "swig":{
+{   
+    // 服务器本身配置
+    "fa": {
+        "port": 80, //运行端口
+        "view": {
+            "ext": "tpl"
+        }
+    },
+    // 模板引擎配置
+    "swig": {
         "cache": false,
         "autoescape": true,
         "varControls": ["{{", "}}"],
         "tagControls": ["{%", "%}"],
         "cmtControls": ["{#", "#}"]
     }
+    
 }

@@ -1,17 +1,22 @@
 require("./enviroment");
 
-var fa = require("../../index")(),
-    app = fa.app
+var fa = require("../../index")();
 
-app.set("views", [__dirname, "views"].join("/"));
+fa.on('express.ready', function (app) {
+    app.set("views", [__dirname, "views"].join("/"));
 
-app.get("/", function(req, res, next) {
-    res.render("index")
+    app.get("/", function(req, res, next) {
+        res.locals.doit = function(){
+            console.log('i want it');
+        }
+        res.render("index",{
+            user: "zhang xixi",
+            doit: 'ass hole'
+        })
+    })
+    
+    fa.emit('ready');
 })
-app.listen(80, function() {
-    fa.emit("started");
-});
 
-fa.on("started",function(){
-   console.log("server started");
-})
+
+fa.start();

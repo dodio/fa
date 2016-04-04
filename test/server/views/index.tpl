@@ -1,4 +1,4 @@
-html:{{ now() }}
+html:{{now()}}
 <br>
-
+{{user}}
 {{ "  sdkfjskdfjaskld  "|trim}}
