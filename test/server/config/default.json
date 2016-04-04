@@ -1,0 +1,9 @@
+{
+    "swig":{
+        "cache": false,
+        "autoescape": true,
+        "varControls": ["{{", "}}"],
+        "tagControls": ["{%", "%}"],
+        "cmtControls": ["{#", "#}"]
+    }
+}

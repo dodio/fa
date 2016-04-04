@@ -1,1 +1,4 @@
-hello
+html:{{ now() }}
+<br>
+
+{{ "  sdkfjskdfjaskld  "|trim}}
