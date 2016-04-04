@@ -14,7 +14,11 @@ fa.on('express.ready', function (app) {
             doit: 'ass hole'
         })
     })
-    
+    app.get("/about", function(req, res, next){
+        res.render("page/about",{
+            title:"关于我们"
+        });
+    })
     fa.emit('ready');
 })
 
