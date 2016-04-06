@@ -1,3 +1,4 @@
+// hack 环境变量
 require("./enviroment");
 
 var fa = require("../../index")();
