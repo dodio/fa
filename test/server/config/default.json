@@ -13,6 +13,24 @@
         "varControls": ["{{", "}}"],
         "tagControls": ["{%", "%}"],
         "cmtControls": ["{#", "#}"]
+    },
+    "middleware": {
+        "bodyParser": {
+            "level": 1,
+            "urlencoded": {
+                "extended": false
+            }
+        },
+        "cookieParser": {
+            "level": 4,
+            "options": {
+                "secret": "zmskUKsl*^%"
+            }
+        },
+        "horse":{
+            "disable": true,
+            "level": 5
+        }
     }
     
 }
