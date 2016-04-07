@@ -24,7 +24,7 @@ node web 脚手架，工具集合
 3、config ：      站点的设置(静态数据）
 3、_locals :      通过res设置的locals（express自动保留的）
 2、util :         模板帮助函数
-4、meta           分类数据相关的locals函数
+4、meta           分类等数据相关的locals函数或者数据
 5、模板内所需数据
 
 所有相关locals的函数，均通过中间件的方式来注入，而不使用app.locals，这样可以提高locals的灵活性（因为可以访问每个res的相关信息）
