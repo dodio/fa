@@ -14,22 +14,84 @@
         "tagControls": ["{%", "%}"],
         "cmtControls": ["{#", "#}"]
     },
+
+    //中间件顺序配置
     "middleware": {
+        "favicon": {
+            "level": 0,
+            "path": "./favicon.icon"
+        },
+
+        "compression": {
+            "level": 10
+            // "disable": true
+        },
+
+        "responseTime": {
+            "level": 20 
+        },
+
         "bodyParser": {
-            "level": 1,
+            "level": 30,
             "urlencoded": {
                 "extended": false
             }
         },
+
         "cookieParser": {
-            "level": 4,
+            "level": 40,
             "options": {
                 "secret": "zmskUKsl*^%"
             }
         },
-        "horse":{
+
+        "session": {
+            "level": 50,
+            
+            //如果使用redis来储存session，将false配置为具体的链接配置
+            "redis": false,
+            "cookie": {
+                "secure": false
+            },
+            "path": "./tmp/session",
+
+            "secret": "FA_SESSION",
+            "name": "FA_SID",
+            
+            // 是否每次请求都将session重新保存，即使没有改变过
+            "resave": false,
+            
+            // 未初始化的session 是否也进行储存，不储存可以让用户在不需要使用session的情况，节约服务器资源
+            "saveUninitialized": false
+        },
+
+        "methodOverride" : {
+            "level": 55,
             "disable": true,
-            "level": 5
+            "methods":[
+                "X-HTTP-Method",
+                "X-HTTP-Method-Override",
+                "X-Method-Override",
+                "_method"
+            ]
+        },
+        //此中间件提供一个data对象用于操作res上的各种数据
+        "data": {
+            "level": 60,
+        },
+        //路由中间件
+        "horse": {
+            "level": 70
+        },
+        //静态资源目录
+        "static": {
+            "disable": true,
+            "level": 80,
+            "urlPattern": "/public",
+            "publicDir": "./public",
+            "options": {
+                "maxAge": 0
+            }
         }
     }
     
