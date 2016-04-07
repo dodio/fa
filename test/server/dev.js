@@ -6,5 +6,5 @@ var fa = require("../../index")(),
 
 app.set("views", [__dirname, "views"].join("/"));
 require('./routes')(fa.horse);
-
+global.fa = fa;
 fa.start();
