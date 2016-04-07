@@ -22,7 +22,12 @@
     "config": "^1.19.0",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "lodash": "^4.8.2",
+    "response-time": "^2.3.1",
     "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "session-file-store": "^0.2.0"
   }
 }
