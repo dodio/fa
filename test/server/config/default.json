@@ -24,7 +24,9 @@
 
         "compression": {
             "level": 10
-            // "disable": true
+            
+            //会出一个invalid compression level:10 的错误，先停掉
+            ,"disable": true
         },
 
         "responseTime": {

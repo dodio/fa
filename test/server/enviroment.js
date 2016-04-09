@@ -1,5 +1,6 @@
 var env = {
     NODE_CONFIG_DIR: [__dirname, 'config'].join('/'),
+    DEBUG: '*,-express:application,-express:router,-express:router:layer'
 }
 
 
