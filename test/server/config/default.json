@@ -87,7 +87,7 @@
         },
         //静态资源目录
         "static": {
-            "disable": true,
+            // "disable": true,
             "level": 80,
             "urlPattern": "/public",
             "publicDir": "./public",
