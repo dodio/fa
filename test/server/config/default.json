@@ -3,6 +3,7 @@
     "fa": {
         "port": 80, //运行端口
         "view": {
+            //模板后缀名
             "ext": "tpl"
         }
     },
@@ -95,6 +96,11 @@
                 "maxAge": 0
             }
         }
-    }
+    },
     
+
+    //settings of bee
+    "bee":{
+
+    }
 }
