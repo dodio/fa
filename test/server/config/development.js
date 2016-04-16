@@ -13,7 +13,8 @@ module.exports = {
     //global defaults to bee.
     "defaults": {
       "headers": {
-        "apikey": "d006b78fed6046dec232092e38335439"
+        "apikey": "d006b78fed6046dec232092e38335439",
+        "User-Agent": "fa-bee"
       }
     },
     // api集群,这里以百度apistore 中 天狗健康资讯为例：http://apistore.baidu.com/apiworks/servicedetail/888.html

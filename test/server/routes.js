@@ -33,6 +33,12 @@ module.exports = function (router) {
     res.json(req.body);
   })
   
+  router.get("/api/tngou",function(req, res){
+    var tngou = fa.bee('tngou');
+    tngou.get('/info/list', function(err, data){
+      res.send(JSON.parse(data.body))
+    })
+  })
 }
 
 
