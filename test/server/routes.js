@@ -51,7 +51,7 @@ module.exports = function(router) {
     // fa.bee('test').get(req.query.url).bee.on('response',function(response){
     //   response.pipe(res);
     // })
-    fa.bee('test').get(req.query.url).bee.pipe(res);
+  fa.bee.request.get(req.query.url).bee.pipe(res);
   })
 }
 
