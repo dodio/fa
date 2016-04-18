@@ -35,8 +35,8 @@ module.exports = function(router) {
 
   router.get("/api/tngou", function(req, res) {
     var tngou = fa.bee('tngou');
-    tngou.get('/info/list', function(err, data) {
-      res.send(JSON.parse(data.body))
+    tngou.get('/info/list').then(function(body){
+      res.send(body)
     })
   })
 }
