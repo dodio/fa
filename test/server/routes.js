@@ -33,11 +33,25 @@ module.exports = function(router) {
     res.json(req.body);
   })
 
-  router.get("/api/tngou", function(req, res) {
+  router.get("/api/tngou", function(req, res, next) {
     var tngou = fa.bee('tngou');
-    tngou.get('/info/list').then(function(body){
-      res.send(body)
+    tngou.get('/info/list').json(function(k, v){
+      console.log(k);
+      if(k === 'img'){
+        return undefined
+      }
+      return v;
+    }).spread(function(data){
+      res.send(data)
     })
+    .catch(next)
+  })
+
+  router.get('/api/img', function(req, res, next){
+    // fa.bee('test').get(req.query.url).bee.on('response',function(response){
+    //   response.pipe(res);
+    // })
+    fa.bee('test').get(req.query.url).bee.pipe(res);
   })
 }
 

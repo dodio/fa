@@ -44,6 +44,12 @@ module.exports = {
             }
           }
         }
+      },
+
+      "test": {
+        "servers":[
+          {"baseUrl":""}
+        ]
       }
     }
   }
