@@ -18,9 +18,11 @@
 
     //中间件顺序配置
     "middleware": {
+        // favicon 专属服务 默认不开启（未添加依赖）
         "favicon": {
             "level": 0,
-            "path": "./favicon.icon"
+            "path": "./favicon.ico",
+            "disable": true
         },
 
         "compression": {
