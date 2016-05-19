@@ -36,8 +36,7 @@ module.exports = function(router) {
   router.get("/api/tngou", function(req, res, next) {
     var tngou = fa.bee('tngou');
     tngou.get('/info/list').json(function(k, v){
-      console.log(k);
-      if(k === 'img'){
+      if(k === req.query.blocked){
         return undefined
       }
       return v;

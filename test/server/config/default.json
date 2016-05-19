@@ -18,9 +18,11 @@
 
     //中间件顺序配置
     "middleware": {
+        // favicon 专属服务 默认不开启（未添加依赖）
         "favicon": {
             "level": 0,
-            "path": "./favicon.icon"
+            "path": "./favicon.ico",
+            "disable": true
         },
 
         "compression": {
@@ -51,13 +53,18 @@
         "session": {
             "level": 50,
             
-            //如果使用redis来储存session，将false配置为具体的链接配置
-            "redis": false,
+            //使用什么方式来储存 session 如果是object 则直接会传给 express-session ,
+            "store":"session-file-store",
+            "session-file-store": {
+                "path": "./tmp/session",
+            },
+
+            "connect-redis": {
+                
+            },
             "cookie": {
                 "secure": false
             },
-            "path": "./tmp/session",
-
             "secret": "FA_SESSION",
             "name": "FA_SID",
             
