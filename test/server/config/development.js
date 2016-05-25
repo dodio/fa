@@ -1,5 +1,11 @@
 var nodePath = require('path')
 module.exports = {
+  "fa": {
+    "view": {
+      "dir": nodePath.join(__dirname, "../views"),
+      "cache": true
+    }
+  },
   "middleware": {
     "session": {
       "path": nodePath.join(__dirname, '../tmp/session')

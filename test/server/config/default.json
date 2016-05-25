@@ -4,7 +4,9 @@
         "port": 80, //运行端口
         "view": {
             //模板后缀名
-            "ext": "tpl"
+            "ext": "tpl",
+            "dir": "./views",
+            "cache": true
         }
     },
     // 模板引擎配置
