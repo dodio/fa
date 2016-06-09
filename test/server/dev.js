@@ -5,6 +5,12 @@ global.Promise = require('bluebird');
 var fa = require("../../index")(),
     app = fa.app
 
-require('./routes')(fa.horse);
 global.fa = fa;
+
+fa.middleware.add("notFound",function () {
+  return function(req, res, next){
+    next(new FaError("URL Not Found", 404))
+  }
+})
+require('./routes')(fa.horse);
 fa.start();

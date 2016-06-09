@@ -21,7 +21,17 @@
 </head>
 <body>
   <div class="header">
-    <div class="container">头部</div>
+    <div class="container">
+      <nav>
+        <a href="/">首页</a>
+        <a href="/about">关于</a>
+        <a href="/error500">500错误</a>
+        <a href="/notexist">404notFound</a>
+        <a href="/api/tngou">bee调用http接口</a>
+        <a href="/array_message">参数校验错误</a>
+        <a href="/simple_message">业务异常</a>
+      </nav>
+    </div>
   </div>
   <div class="container">
     {% block content %}
