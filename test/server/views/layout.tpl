@@ -28,8 +28,10 @@
         <a href="/error500">500错误</a>
         <a href="/notexist">404notFound</a>
         <a href="/api/tngou">bee调用http接口</a>
-        <a href="/array_message">参数校验错误</a>
         <a href="/simple_message">业务异常</a>
+        <a href="/array_message">参数校验</a>
+        <a href="/array_message?user_id=abadfasd">参数校验1</a>
+        <a href="/array_message?user_id=abadfasd&num=123123">参数校验2</a>
       </nav>
     </div>
   </div>

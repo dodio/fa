@@ -35,11 +35,11 @@ module.exports = function(router) {
     });
   })
 
-  router.get("/array_message", function(req, res, next) {
-    var info = [{
-      "userid": "用户id不能为中文"
-    }]
-    res.message(50, info, "参数错误")
+  router.get("/array_message", fa.validate.common.param({
+    user_id: "not_empty",
+    num: "int"
+  }), function(req, res, next) {
+    res.message.success(req.validate, "校验通过")
   })
 
   router.get("/simple_message", function(req, res, next) {
